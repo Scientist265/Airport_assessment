@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BEA54683-1B5E-4004-8A7E-5F9FF7D738CA</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="airport" transform="translate(-218.000000, -2024.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-22" transform="translate(20.000000, 2009.000000)">
+                <g id="Group-21" transform="translate(178.000000, 0.000000)">
+                    <g id="Group-4" transform="translate(20.000000, 14.000000)">
+                        <path d="M3.62,8.79 C5.06,11.62 7.38,13.93 10.21,15.38 L12.41,13.18 C12.68,12.91 13.08,12.82 13.43,12.94 C14.55,13.31 15.76,13.51 17,13.51 C17.55,13.51 18,13.96 18,14.51 L18,18 C18,18.55 17.55,19 17,19 C7.61,19 0,11.39 0,2 C0,1.45 0.45,1 1,1 L4.5,1 C5.05,1 5.5,1.45 5.5,2 C5.5,3.25 5.7,4.45 6.07,5.57 C6.18,5.92 6.1,6.31 5.82,6.59 L3.62,8.79 Z" id="call"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+name: utlpal_ravi_assesment
+description: "A new Flutter project."
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.10+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/svg/
+    - assets/png/
+    - assets/images/
+
+  fonts:
+    - family: UberMove
+      fonts:
+        - asset: assets/fonts/UberMoveBold.otf
+        - asset: assets/fonts/UberMoveMedium.otf
+fonts:
+    - family: Apple Color Emoji
+      fonts:
+        - asset: assets/fonts/Apple Color Emoji.otf
+       
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
