@@ -5,6 +5,7 @@ import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 import 'package:utlpal_ravi_assesment/src/utils/utils.dart';
+import 'package:utlpal_ravi_assesment/src/widgets/card_decoration.dart';
 import 'package:utlpal_ravi_assesment/src/widgets/widgets.dart';
 
 class SelfParking extends StatelessWidget {
@@ -15,16 +16,7 @@ class SelfParking extends StatelessWidget {
     return Container(
       width: AppConst.kWidth,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-      decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(12.h),
-          border: Border.all(color: AppColors.darkWhiteColor, width: 1),
-          boxShadow: const [
-            BoxShadow(
-                color: AppColors.darkWhiteColor,
-                spreadRadius: 1,
-                blurRadius: 0.1)
-          ]),
+      decoration: cardDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,12 +28,12 @@ class SelfParking extends StatelessWidget {
           gaph12,
           const Row(
             children: [
-              T1andT2(
+              TBlock(
                 text: 'T1',
                 isSelected: true,
               ),
               gapW16,
-              T1andT2(text: "T2"),
+              TBlock(text: "T2"),
             ],
           ),
           gapW16,
@@ -66,8 +58,8 @@ class SelfParking extends StatelessWidget {
   }
 }
 
-class T1andT2 extends StatelessWidget {
-  const T1andT2({
+class TBlock extends StatelessWidget {
+  const TBlock({
     super.key,
     this.isSelected,
     required this.text,
@@ -125,7 +117,7 @@ class AutombileChoiceWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  " AED $price / day",
+                  " AED $price /day",
                   style: AppTextStyle.kPrimaryTextStyle
                       .copyWith(color: AppColors.darkGreyColor),
                 ),

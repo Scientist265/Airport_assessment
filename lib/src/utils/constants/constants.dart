@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:utlpal_ravi_assesment/src/feature/models/foreign_exchange_model.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 
@@ -67,4 +68,19 @@ class AppConstant {
       ),
     ];
   }
+
+  static List<ForeignExchangeModel> exchanges = [
+    ForeignExchangeModel(
+        exchangeName: "Travelex",
+        locationAddress:
+            "Terminal 3 - Airside Dept Downtown, Concourse B, Terminal 3, beside Winston Smoking room"),
+    ForeignExchangeModel(
+        exchangeName: "Al Ansari Exchange",
+        locationAddress:
+            "Al Ansari 3 - Airside Dept Downtown, Concourse B, Al Ansari , beside Winston Smoking room"),
+    ForeignExchangeModel(
+        exchangeName: "Emirates NBD",
+        locationAddress:
+            "Emirates NBD 3 - Airside Dept Downtown, Concourse B, Emirates NBD, beside Winston Smoking room"),
+  ];
 }

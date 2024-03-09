@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
+import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 import 'package:utlpal_ravi_assesment/src/widgets/widgets.dart';
 
@@ -32,12 +33,14 @@ class CustomButton extends StatelessWidget {
             color: buttonColor ?? AppColors.blackColor,
             borderRadius: BorderRadius.circular(10.h)),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            svgIcon(iconPath: iconPath),
+            svgIcon(iconPath: iconPath, color: AppColors.whiteColor),
+            gapW12,
             Text(
               buttonText,
               style: AppTextStyle.kButtonTextStyle.copyWith(
-                  color: buttonTextColor ?? AppColors.blackColor,
+                  color: buttonTextColor ?? AppColors.whiteColor,
                   fontSize: size),
             ),
           ],
