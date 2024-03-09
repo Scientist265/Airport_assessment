@@ -4,7 +4,7 @@ class AppAssets {
   }
 
   static String _getSvgIconPath(String asset) {
-    return "assets/icons/$asset.svg";
+    return "assets/svg/$asset.svg";
   }
 
   // for png images/logo

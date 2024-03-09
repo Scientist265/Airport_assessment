@@ -1,10 +1,13 @@
 import "package:flutter/material.dart";
 import "package:flutter_svg/flutter_svg.dart";
+import "package:utlpal_ravi_assesment/src/utils/constants/colors.dart";
 
-Widget svgIcon({required String iconPath, double? width, double? height}) {
+Widget svgIcon(
+    {required String iconPath, double? width, double? height, Color? color}) {
   return SvgPicture.asset(
     iconPath,
-    width: width ?? 24.0,
-    height: height ?? 24,
+    color: color ?? AppColors.blackColor,
+    width: width ?? 20.0,
+    height: height ?? 20,
   );
 }
