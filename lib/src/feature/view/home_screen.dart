@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:utlpal_ravi_assesment/src/feature/widgets/forecast_data_widget.dart';
 import 'package:utlpal_ravi_assesment/src/feature/widgets/header_title.dart';
-import 'package:utlpal_ravi_assesment/src/utils/assets.dart';
-import 'package:utlpal_ravi_assesment/src/utils/constants/app_strings.dart';
+import 'package:utlpal_ravi_assesment/src/feature/widgets/public_transport.dart';
+import 'package:utlpal_ravi_assesment/src/feature/widgets/self_parking.dart';
+import 'package:utlpal_ravi_assesment/src/feature/widgets/taxi_service.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/constants.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
-import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
-import 'package:utlpal_ravi_assesment/src/utils/utils.dart';
-import 'package:utlpal_ravi_assesment/src/widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,7 +46,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 const HeaderTitle(),
                 gaph8,
                 const FlightDetailCard(),
-                gaph16,
+                gaph20,
                 TabBar(
                   indicatorPadding: EdgeInsets.zero,
                   isScrollable: true,
@@ -61,79 +59,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     setState(() {});
                   },
                 ),
-                gaph8,
-                //Taxi Service 
+                gaph20,
+
+                //Taxi Service
+                const TaxiService(),
+                gaph20,
+                const PublicTransport(),
+                gaph20,
+                const SelfParking(),
               ],
             ),
           ),
         )),
-      ),
-    );
-  }
-}
-
-class FlightDetailCard extends StatelessWidget {
-  const FlightDetailCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 285.h,
-      width: AppConst.kWidth,
-      margin: EdgeInsets.symmetric(vertical: 10.h),
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-            image: NetworkImage(cityView), fit: BoxFit.cover),
-        borderRadius: BorderRadius.circular(12.h),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            padding: const EdgeInsets.only(top: 15),
-            margin: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.h),
-              color: AppColors.whiteColor,
-            ),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    ForecastDataWidget(
-                      data: "19 C",
-                      desc: "Cloudy",
-                      iconPath: AppAssets.cloud,
-                    ),
-                    ForecastDataWidget(
-                      data: "30 Jan",
-                      desc: "Mon",
-                      iconPath: AppAssets.calendar,
-                    ),
-                    ForecastDataWidget(
-                      data: "8:45 PM",
-                      desc: "GMT",
-                      iconPath: AppAssets.time,
-                    ),
-                    ForecastDataWidget(
-                      data: "AED",
-                      desc: "1\$ -3.67AED",
-                      iconPath: AppAssets.currency,
-                    )
-                  ],
-                ),
-                gaph8,
-                const Divider(
-                  thickness: 0.5,
-                  color: AppColors.darkWhiteColor,
-                ),
-                const ForecastDataButtons(),
-              ],
-            ),
-          )
-        ],
       ),
     );
   }

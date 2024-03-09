@@ -1,6 +1,6 @@
 class AppAssets {
   static String _getPngImages(String asset) {
-    return "assets/images/$asset.png";
+    return "assets/png/$asset.png";
   }
 
   static String _getSvgIconPath(String asset) {
