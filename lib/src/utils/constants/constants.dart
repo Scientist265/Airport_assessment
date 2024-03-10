@@ -56,7 +56,8 @@ class AppConstant {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-              color: index == 3 ? AppColors.blackColor : AppColors.whiteColor,
+              color:
+                  index == 3 ? AppColors.blackColor : AppColors.darkWhiteColor,
               borderRadius: BorderRadius.circular(18.h)),
           child: Text(
             "Contact info",
@@ -68,6 +69,8 @@ class AppConstant {
       ),
     ];
   }
+
+  static List<Widget> screens = [];
 
   static List<ForeignExchangeModel> exchanges = [
     ForeignExchangeModel(

@@ -36,17 +36,19 @@ class SelfParking extends StatelessWidget {
               TBlock(text: "T2"),
             ],
           ),
-          gapW16,
+          gaph16,
           AutombileChoiceWidget(
             iconPath: AppAssets.twoWheeler,
             autombileName: "Two wheeler",
             price: "50",
           ),
+          gaph12,
           AutombileChoiceWidget(
             iconPath: AppAssets.car,
             autombileName: "Car Parking",
             price: "100",
           ),
+          gaph12,
           AutombileChoiceWidget(
             iconPath: AppAssets.electricCar,
             autombileName: "Electric Car Parking",
@@ -98,36 +100,37 @@ class AutombileChoiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            svgIcon(iconPath: iconPath, height: 22),
-            gapW16,
-            Text(autombileName,
-                style: AppTextStyle.kSubHeadTexStyle.copyWith(
-                  color: AppColors.darkGreyColor,
-                ))
-          ],
-        ),
-        TextButton(
-            onPressed: () {},
-            child: Row(
-              children: [
-                Text(
-                  " AED $price /day",
-                  style: AppTextStyle.kPrimaryTextStyle
-                      .copyWith(color: AppColors.darkGreyColor),
-                ),
-                const Icon(
-                  Icons.warning,
-                  color: AppColors.darkGreyColor,
-                )
-              ],
-            ))
-      ],
+    return SizedBox(
+      width: AppConst.kWidth,
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              svgIcon(iconPath: iconPath, height: 22),
+              gapW16,
+              Text(autombileName,
+                  style: AppTextStyle.kSubHeadTexStyle.copyWith(
+                    color: AppColors.darkGreyColor,
+                  ))
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                " AED $price /day",
+                style: AppTextStyle.kPrimaryTextStyle
+                    .copyWith(color: AppColors.darkGreyColor),
+              ),
+              // const Icon(
+              //   Icons.warning,
+              //   color: AppColors.darkGreyColor,
+              // )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

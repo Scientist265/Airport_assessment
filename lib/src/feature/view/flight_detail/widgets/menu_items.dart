@@ -5,9 +5,20 @@ import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 import 'package:utlpal_ravi_assesment/src/widgets/widgets.dart';
 
-class MenuItems extends StatelessWidget {
-  const MenuItems({super.key, this.isSelected});
-  final bool? isSelected;
+class MenuItems extends StatefulWidget {
+  const MenuItems({
+    super.key,
+  });
+
+  @override
+  State<MenuItems> createState() => _MenuItemsState();
+}
+
+class _MenuItemsState extends State<MenuItems> {
+  bool isChoose = false;
+  void selectFlight() {
+    isChoose = !isChoose;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,43 +28,61 @@ class MenuItems extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              svgIcon(iconPath: AppAssets.me),
-              gapW12,
-              Text(
-                "My Flights",
-                style: AppTextStyle.kSubHeadTexStyle,
-              ),
-              isSelected == true
-                  ? const Icon(
-                      Icons.check,
-                    )
-                  : const SizedBox.shrink()
-            ],
+          GestureDetector(
+            onTap: () {
+              selectFlight();
+              setState(() {
+                // isChoose = true;
+              });
+            },
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                svgIcon(iconPath: AppAssets.me),
+                gapW12,
+                Text(
+                  "My Flights",
+                  style: AppTextStyle.kSubHeadTexStyle,
+                ),
+                const Spacer(),
+                isChoose == true
+                    ? const Icon(
+                        Icons.check,
+                        color: AppColors.blueColor,
+                      )
+                    : const SizedBox.shrink()
+              ],
+            ),
           ),
           const Divider(
             thickness: 0.8,
             color: AppColors.darkWhiteColor,
           ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              svgIcon(iconPath: AppAssets.friends),
-              gapW12,
-              Text(
-                "Friend's flights",
-                style: AppTextStyle.kSubHeadTexStyle,
-              ),
-              isSelected == true
-                  ? const Icon(
-                      Icons.check,
-                    )
-                  : const SizedBox.shrink()
-            ],
+          GestureDetector(
+            onTap: () {
+              selectFlight();
+              setState(() {});
+            },
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                svgIcon(iconPath: AppAssets.friends),
+                gapW12,
+                Text(
+                  "Friend's flights",
+                  style: AppTextStyle.kSubHeadTexStyle,
+                ),
+                const Spacer(),
+                isChoose == false
+                    ? const Icon(
+                        Icons.check,
+                        color: AppColors.blueColor,
+                      )
+                    : const SizedBox.shrink()
+              ],
+            ),
           )
         ],
       ),

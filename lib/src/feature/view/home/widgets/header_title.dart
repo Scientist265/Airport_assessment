@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
-import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 
 class HeaderTitle extends StatelessWidget {

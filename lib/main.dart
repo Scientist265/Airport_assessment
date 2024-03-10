@@ -1,16 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:utlpal_ravi_assesment/src/config/routes.dart';
-
-import 'src/feature/view/home/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
   runApp(
-    const MyApp(),
+   const MyApp()
   );
 }
 
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Assessment',
-            initialRoute: detailRoute,
+            initialRoute: homeRoute,
             routes: routes,
           );
         });

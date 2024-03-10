@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         child: Scaffold(
             body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 const FlightDetailCard(),
                 gaph20,
                 TabBar(
+                  tabAlignment: TabAlignment.start,
                   indicatorPadding: EdgeInsets.zero,
                   isScrollable: true,
                   indicator: const BoxDecoration(),

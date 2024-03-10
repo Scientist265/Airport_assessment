@@ -9,7 +9,10 @@ import 'package:utlpal_ravi_assesment/src/widgets/card_decoration.dart';
 import 'package:utlpal_ravi_assesment/src/widgets/widgets.dart';
 
 class TicketWidget extends StatelessWidget {
-  const TicketWidget({super.key});
+  const TicketWidget(
+      {super.key, required this.date, required this.from, required this.to});
+  final String date;
+  final String from, to;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class TicketWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Mon, 20 Dec 24",
+                date,
                 style: AppTextStyle.kHeaderTextStyle.copyWith(fontSize: 14),
               ),
               Row(
@@ -55,7 +58,7 @@ class TicketWidget extends StatelessWidget {
             children: [
               RichText(
                 text: TextSpan(
-                    text: "DEL ",
+                    text: from,
                     style: AppTextStyle.kHeaderTextStyle,
                     children: [
                       TextSpan(
@@ -75,7 +78,7 @@ class TicketWidget extends StatelessWidget {
                     style: AppTextStyle.kHeaderTextStyle,
                     children: [
                       TextSpan(
-                          text: " BOM",
+                          text: to,
                           style: AppTextStyle.kHeaderTextStyle
                               .copyWith(fontWeight: FontWeight.w600))
                     ]),

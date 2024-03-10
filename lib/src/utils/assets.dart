@@ -13,6 +13,7 @@ class AppAssets {
   static String map = _getPngImages("map");
   static String uber = _getPngImages("uber");
   static String yango = _getPngImages("yango");
+  static String whatsapp = _getPngImages("whatsapp");
 
   // icons
   static String add = _getSvgIconPath("add");
@@ -40,4 +41,5 @@ class AppAssets {
   static String time = _getSvgIconPath("time");
   static String twoWheeler = _getSvgIconPath("two_wheeler");
   static String upArrow = _getSvgIconPath("up_arrow");
+  static String more = _getSvgIconPath("more");
 }

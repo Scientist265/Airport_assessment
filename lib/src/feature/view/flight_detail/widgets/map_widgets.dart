@@ -23,7 +23,7 @@ class MapWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 20,
+          top: 30,
           right: 0,
           left: 0,
           child: Container(
@@ -33,7 +33,7 @@ class MapWidget extends StatelessWidget {
               color: AppColors.realWhiteColor,
               borderRadius: BorderRadius.circular(10.h),
             ),
-            child: Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -42,12 +42,12 @@ class MapWidget extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 25,
                     backgroundColor: Colors.transparent,
-                    child: Image.network(personImage),
+                    backgroundImage: NetworkImage(personImage),
                   ),
                 ),
-                const MapDetailWidget(title: "Flights", value: "04"),
-                const MapDetailWidget(title: "Countries", value: "06"),
-                const MapDetailWidget(title: "Distance", value: "4,287Km"),
+                MapDetailWidget(title: "Flights", value: "04"),
+                MapDetailWidget(title: "Countries", value: "06"),
+                MapDetailWidget(title: "Distance", value: "4,287Km"),
               ],
             ),
           ),

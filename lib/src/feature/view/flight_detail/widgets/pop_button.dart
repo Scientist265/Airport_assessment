@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:popover/popover.dart';
 import 'package:utlpal_ravi_assesment/src/feature/view/flight_detail/widgets/menu_items.dart';
 import 'package:utlpal_ravi_assesment/src/utils/assets.dart';
@@ -19,7 +18,11 @@ class PopButton extends StatelessWidget {
         bodyBuilder: (context) => const MenuItems(),
         width: 230,
       ),
-      child: svgIcon(iconPath: AppAssets.downArrow, height: 14, width: 14),
+      child: svgIcon(
+        iconPath: AppAssets.downArrow,
+        height: 14,
+        width: 14,
+      ),
     );
   }
 }

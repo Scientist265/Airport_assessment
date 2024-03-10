@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:photo_view/photo_view.dart';
 import 'package:utlpal_ravi_assesment/src/feature/view/home/widgets/self_parking.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/app_strings.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
@@ -49,23 +50,55 @@ class TerminalMap extends StatelessWidget {
                   fit: BoxFit.cover,
                 )),
             child: Center(
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                decoration: BoxDecoration(
-                  color: AppColors.blackColor,
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Text(
-                  "View",
-                  style: AppTextStyle.kPrimaryTextStyle.copyWith(
-                    color: AppColors.darkWhiteColor,
+              child: GestureDetector(
+                onTap: () => _buildImagePreview(context),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppColors.blackColor,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Text(
+                    "View",
+                    style: AppTextStyle.kPrimaryTextStyle.copyWith(
+                      color: AppColors.darkWhiteColor,
+                    ),
                   ),
                 ),
               ),
             ),
           )
         ],
+      ),
+    );
+  }
+
+  _buildImagePreview(context) {
+    showDialog(
+      context: context,
+      builder: (context) => const PreviewImage(imgPath: cityView),
+    );
+  }
+}
+
+class PreviewImage extends StatelessWidget {
+  const PreviewImage({super.key, required this.imgPath});
+  final String imgPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      child: Container(
+        height: AppConst.kheight * 0.4,
+        width: AppConst.kWidth * 0.8,
+        decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(12.h)),
+        child: PhotoView(
+          
+          imageProvider: NetworkImage(imgPath,),
+        ),
       ),
     );
   }
