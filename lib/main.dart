@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:utlpal_ravi_assesment/src/config/routes.dart';
 
-import 'src/feature/view/home_screen.dart';
+import 'src/feature/view/home/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,10 +26,11 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return const MaterialApp(
+          return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Assessment',
-            home: HomePage(),
+            initialRoute: detailRoute,
+            routes: routes,
           );
         });
   }

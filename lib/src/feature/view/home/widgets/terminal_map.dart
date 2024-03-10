@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:utlpal_ravi_assesment/src/feature/widgets/self_parking.dart';
+import 'package:utlpal_ravi_assesment/src/feature/view/home/widgets/self_parking.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/app_strings.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';

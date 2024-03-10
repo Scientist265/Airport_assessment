@@ -5,6 +5,7 @@ import 'package:utlpal_ravi_assesment/src/utils/constants/colors.dart';
 import 'package:utlpal_ravi_assesment/src/utils/constants/sizing.dart';
 import 'package:utlpal_ravi_assesment/src/utils/text_style.dart';
 import 'package:utlpal_ravi_assesment/src/utils/utils.dart';
+import 'package:utlpal_ravi_assesment/src/widgets/card_decoration.dart';
 
 class TaxiService extends StatelessWidget {
   const TaxiService({
@@ -17,16 +18,7 @@ class TaxiService extends StatelessWidget {
       
       width: AppConst.kWidth,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-      decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(12.h),
-          border: Border.all(color: AppColors.darkWhiteColor, width: 1),
-          boxShadow: const [
-            BoxShadow(
-                color: AppColors.darkWhiteColor,
-                spreadRadius: 1,
-                blurRadius: 0.1)
-          ]),
+      decoration:cardDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
