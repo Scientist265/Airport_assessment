@@ -13,37 +13,31 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Row(children: [
-              Text(
-                "My Flights",
-                style: AppTextStyle.kHeaderTextStyle,
-              ),
-              gapW12,
-              const CircleAvatar(
-                  radius: 8,
-                  backgroundColor: AppColors.darkWhiteColor,
-                  child: PopButton())
-            ]),
-            Row(children: [
-              svgIcon(
-                iconPath: AppAssets.search,
-              ),
-              gapW32,
-              svgIcon(
-                iconPath: AppAssets.add,
-              )
-            ])
-          ],
-        )
+        Row(children: [
+          Text(
+            "My Flights",
+            style: AppTextStyle.kHeaderTextStyle,
+          ),
+          gapW12,
+          const CircleAvatar(
+              radius: 8,
+              backgroundColor: AppColors.darkWhiteColor,
+              child: PopButton())
+        ]),
+        const Spacer(),
+        Row(children: [
+          svgIcon(
+            iconPath: AppAssets.search,
+          ),
+          gapW32,
+          svgIcon(
+            iconPath: AppAssets.add,
+          )
+        ])
       ],
     );
   }

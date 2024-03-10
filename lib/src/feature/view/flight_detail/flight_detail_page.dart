@@ -22,7 +22,7 @@ class DetailPage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          // TODO Not working on Emulator 
+          // TODO Not working on Emulator
           // const TheMap(),
 
           const MapWidget(),

@@ -66,7 +66,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   },
                 ),
                 gaph20,
-
                 //Taxi Service
                 const TaxiService(),
                 gaph20,
