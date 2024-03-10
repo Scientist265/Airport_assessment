@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 gaph20,
                 Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CustomButton(
